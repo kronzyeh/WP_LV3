@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearGalaxy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="background"></div>
+    <h1>GearGalaxy</h1>
+    <div class="cart-container">
+      <button class="cart-button">Cart <span class="cart-badge">0</span></button>
+      <select id="sort-select">
+          <option value="" selected disabled hidden>Sort Items...</option>
+          <option value="lowest">Lowest Price</option>
+          <option value="highest">Highest Price</option>
+          <option value="alphabetical">Alphabetical</option>
+      </select>
+      <input type="text" id="search-input" placeholder="Search">
+      <button id="search-button">Search</button>
+    </div>
+    <div class="items-grid"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Cart</h2>
+        <ul class="cart-items"></ul>
+        <div class="purchase-message" style="display: none;">Purchase successful!</div>
+        <div class="empty-cart-message" style="display: none;">Your cart is empty. There is nothing to buy.</div>
+        <div class="insufficient-funds-message" style="display: none;">
+          <p>You do not have enough money to purchase these items.</p>
+        </div>
+        <hr>
+        <p>Total: <span class="cart-total">$0.00</span></p>
+        <p>Wallet: <span class="wallet-amount">$1000.00</span></p>
+        <button class="buy-btn">Buy</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
